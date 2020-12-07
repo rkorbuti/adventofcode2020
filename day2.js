@@ -1,5 +1,5 @@
 var fs = require('fs');
-var lines = fs.readFileSync('./day2data.txt', 'utf-8').split('\n');
+var lines = fs.readFileSync('./data/day2data.txt', 'utf-8').split('\n');
 
 let task1_counter = (task2_counter = 0);
 let min, max, letter, password;
