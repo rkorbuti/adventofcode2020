@@ -1,4 +1,4 @@
-const { expenses } = require('./data/day1data.js');
+const { expenses } = require('./day1data.js');
 
 expenses.forEach((el) => {
   expenses.includes(2020 - el) ? console.log((2020 - el) * el) : '';

@@ -1,5 +1,5 @@
 var fs = require('fs');
-var lines = fs.readFileSync('./data/day2data.txt', 'utf-8').split('\n');
+var lines = fs.readFileSync('./day2/day2data.txt', 'utf-8').split('\n');
 
 let task1_counter = (task2_counter = 0);
 let min, max, letter, password;
@@ -14,7 +14,7 @@ lines.forEach((line) => {
   xor(password.charAt(min - 1) === letter, password.charAt(max - 1) === letter) ? task2_counter++ : '';
 });
 
-console.log(task1_counter, task2_counter);
+console.log('task1:', task1_counter, 'task2:', task2_counter);
 
 function countCharacters(char, string) {
   return string.split('').reduce((acc, ch) => (ch === char ? acc + 1 : acc), 0);

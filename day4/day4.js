@@ -1,5 +1,5 @@
 var fs = require('fs');
-var lines = fs.readFileSync('./data/day4data.txt', 'utf-8').split('\n\n');
+var lines = fs.readFileSync('./day4/day4data.txt', 'utf-8').split('\n\n');
 
 let task1_counter = task2_counter = 0;
 
@@ -7,7 +7,7 @@ lines.map((line) => convertToObject(line)).forEach(obj => {
   task1Match(obj) ? task1_counter++ : '';
   task2Match(obj) ? task2_counter++ : '';
 })
-console.log(task1_counter, task2_counter);
+console.log('task1: ' + task1_counter, 'task2: ' + task2_counter);
 
 function task1Match(obj) {
   return obj.byr && obj.iyr && obj.eyr && obj.hcl && obj.hgt && obj.ecl && obj.pid
